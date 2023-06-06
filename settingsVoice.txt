@@ -1,0 +1,1 @@
+{"stability":0.75,"similarity_boost":0.75}
