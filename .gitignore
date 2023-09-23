@@ -1,6 +1,2 @@
 venv/
-<<<<<<< HEAD
 .env
-=======
-.env
->>>>>>> 1e60159 (Update .gitignore to exclude .env)
