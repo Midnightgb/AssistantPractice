@@ -18,19 +18,14 @@ recognizer = sr.Recognizer()
 
 # Cargar variables de entorno
 load_dotenv()
-
 # API KEY de OpenWeatherMap
 api_key = os.environ.get("API_KEY")
-
 # API KEY de Google
 api_key_google = os.environ.get("API_KEY_GOOGLE")
-
 # ID del motor de búsqueda de Google
 search_engine_id = os.environ.get("SEARCH_ENGINE_ID")
-
 # API KEY de Eleven Labs
 eleven_labs_api_key = os.environ.get("ELEVEN_LABS_API_KEY")
-
 # Función para escuchar el comando de voz
 
 
@@ -39,7 +34,6 @@ def escuchar_comando():
         print("Escuchando comando...")
         recognizer.adjust_for_ambient_noise(source)
         audio = recognizer.listen(source)
-
         try:
             texto = recognizer.recognize_google(audio, language="es-ES")
             texto = texto.lower()
@@ -202,12 +196,10 @@ def asistente_virtual():
     escucha_activa = False
     while True:
         comando = escuchar_comando()
-
         if "alexa" in comando or "alexa" in comando:
             escucha_activa = True
             activa = random.choice(respuestas_aqui)
             hablar(activa)
-
         if escucha_activa:
             comando = escuchar_comando()
             if "hola" in comando:
